@@ -4,7 +4,7 @@
 go get github.com/goclub/type
 ```
 
-go 的类型系统没有 int? 这样的语法来表达一些基础字段是 nil 还是zero value.有些业务场景需要实现类似 int? 来解决问题.
+go 的类型系统没有 `int?` 这样的语法来表达一些基础字段是 nil 还是zero value.有些业务场景需要实现类似 `int?` 来解决问题.
 
 goclub/type 提供了 Option 类型来解决这类问题. 
 
