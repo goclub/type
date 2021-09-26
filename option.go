@@ -171,3 +171,11 @@ type OptionTime struct {
 func (o OptionTime) Valid() bool { return o.valid }
 func (o OptionTime) Unwrap() time.Time { if o.valid {return o.time}; return time.Time{} }
 func Time(t time.Time) OptionTime { return OptionTime{ t, true} }
+
+type OptionDuration struct {
+	duration time.Duration
+	valid bool
+}
+func (o OptionDuration) Valid() bool { return o.valid }
+func (o OptionDuration) Unwrap() time.Duration { if o.valid { return o.duration}; return time.Duration(0) }
+func Duration(d time.Duration) OptionDuration { return OptionDuration{d, true} }
